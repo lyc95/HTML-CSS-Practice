@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Layout</title>
+    <style>
+        .outer{
+            background-color: #bfa;
+            /* by default, width of parent element 被内容撑开 */
+            /* if width  = xxxpx, take that width */
+        }
+        .inner{
+            width: 100px;
+            height: 200px;
+            background-color: yellow;
+            margin-bottom: 100px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            /* overflow: auto; */
+            overflow-y: auto;
+            overflow-x: auto;
+        }
+        .box2{
+            width: 100px;
+            height: 400px;
+            background-color: orange;
+            /*
+                 如果子元素的的大小超过了父元素，则会从父元素中溢出
+                    使用overflow 来处理
+                        visible: default 溢出并在父元素外部显示
+                        hidden:溢出父元素的内容不会显示
+                        scroll:生成两个滚动条，通过滚动条查看完整内容
+                        auto 根据需要生成滚动条， 比如水平方向没有溢出，则不需要水平scroll
+                        overflow-x 单独处理一个方向上的溢出
+                        overflow-y 单独处理一个方向上的溢出
+             */
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="outer">
+        <div class="inner"></div>
+        <div class="inner"></div>
+    </div> -->
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

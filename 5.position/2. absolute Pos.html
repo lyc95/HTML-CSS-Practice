@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 60px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /*
+                Absolute Position
+                -特点
+                    1. 开启后， 如果不设置offset，元素的位置不会变
+                    2. 开启后， 元素会从文档流中脱离
+                    3. 绝对定位 会改变元素的性质
+                        inline change to block， block的宽高度被内容撑开
+                    4. 绝对定位会使元素提高一层级
+                    5. 绝对定位的元素是相对其包含块进行定位的, 
+                        包含块containing block：
+                            -正常情况
+                                包含块是是离当前元素最近的祖先块元素(block element)
+                                <div><div></div></div>
+                                <div><span><em></em></span></div>
+                            -绝对定位的containing block：
+                                包含块是离当前元素最近的开启定位的祖先元素
+                                    - 什么算是开启定位？ 只要不是position: static 都可以
+                                    - 如果都没开启， 则相会于根元素html tag（初始包含块）进行定位
+                        
+                        -html tag（初始包含块）
+
+
+             */
+             position: absolute;
+             top: 0;
+             left: 0;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>

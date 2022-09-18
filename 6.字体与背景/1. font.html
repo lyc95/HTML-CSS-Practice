@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            /* 
+                color 字体颜色 
+                font-size
+                em 当前元素的一个font-size
+                rem 根元素的一个font-size
+                font-family 字体格式
+            */
+            color: red;
+            font-size: 200px;
+            /* 同时指定多个字体，生效时优先使用第一个，如无法使用，则第二个...以此类推 */
+            font-family: 'Courier New', Courier, monospace;
+            /* font-family: myfont; */
+        }
+        /* 
+            @font-face可以将服务器中的字体直接提供给用户使用 
+            1. 加载慢
+            2. 版权问题
+            3. 字体格式
+        */
+        @font-face {
+            font-family: 'myfont';
+            /* server中字体的路径 */
+            src: url('./font/xxxxxxx.ttf');
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Today is good !
+    </p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .s1{
+            background-color: yellow;
+
+            /*
+                 Inline element 
+                    不支持设置宽度和高度， 因为其内容区域的大小由其内容同决定
+                    可以设置padding,border,margin， 但是垂直方向上不影响布局(不会影响其他元素的排列)
+
+             */
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            /* border: 100px red solid; */
+            margin: 50px;
+
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+        a{
+            /*
+                display 用来设置元素的显示类型（转换element type）
+                    inline 设置为行内元素
+                    block 设置为块元素
+                    inline-block 行内块元素
+                        可以设置width and height 但是不会独占一行
+                    table  设置成表格
+                    none 不显示， 且不占据位置
+                visibility 设置元素的显示状态
+                    visible default 正常显示
+                    hidden 隐藏不显示， 但是其位置依然会被保留（依然占据位置）
+
+             */
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: #bac;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:;">link</a>
+    <span class="s1">It is Span!</span><span class="s1">It is Span!</span>
+    <div class="box1"></div>
+</body>
+</html>

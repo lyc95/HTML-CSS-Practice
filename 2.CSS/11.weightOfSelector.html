@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Of Selector</title>
+    <style>
+        /* 101 */
+        div#box1{
+            color: yellow;
+        }
+        /* 10 */
+        .red{
+            color: red;
+        }
+        /* 100 */
+        #box1{
+            color: blueviolet;
+        }
+
+        /* 分组选择器是单独计算的 */
+        div,p,span{
+            color: blue;
+        }
+
+        .d1{
+            /* 如果优先级计算后相同， 则优先使用靠下的样式 */
+            color: aqua;
+        }
+
+        *{
+            font-size: 50px;
+        }
+        div{
+            font-size: 20px;
+        }
+        .green{
+            /* 获得最高优先级 */
+            background-color:green !important;
+        }
+        /*
+            样式冲突 Specificity
+            happened when different selectors choose the same element
+            weight of style as following:
+                1. internal style(内联样式)              1,0,0,0
+                2. id selector                          0,1,0,0  
+                3. class and Pseudo-classes selector    0,0,1,0
+                4. element selector                     0,0,0,1
+                5. all selector                         0,0,0,0
+                5. inheritance style                    没有优先级(比零还差)
+
+            1. when comparing priority of style, we will need to sum up all the weight of
+            selectors and compare the value of sum and then choose the highest one
+
+            2. 选择器的累加不会超过其最大的值，即类选择器再高也不会超过id selector
+
+            3. 如果优先级计算后相同， 则优先使用靠下的样式
+
+            4. 添加 !important to get highest weight which will exceed the internal style
+                开发中慎用！！！改起来很麻烦
+
+         */
+    </style>
+</head>
+<body>
+    <p>test</p>
+    <div id="box1" class="red" > 我是div <span>我是div里的span, 虽然继承了div的20px但是它没有权重，所以我还是follow all selector的font size</span></div>
+    <div class="red d1">如果优先级计算后相同， 则优先使用靠下的样式</div>
+
+    <div class = "green"style="background-color:aqua;">Test 2</div>
+</body>
+</html>

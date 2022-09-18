@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+    <style>
+        body{
+            height: 3000px;
+        }
+        .nav{
+            width: 1210px;
+            height: 48px;
+            background-color: #e8e7e3;
+            margin: 100px auto;
+            position: sticky;
+            /* 相对其包含块 */
+            top: 10px;
+            left: 0;
+            /* 
+                和相对定位的特点基本一致， 不同的是粘滞定位可以在元素到达某个位置时候将其固定
+             */
+        }
+        .nav li {
+            float: left;
+            list-style: none;
+            height: 48px;
+            line-height: 48px;
+        }
+        .nav a{
+            /* set 块内都可以点击 instead of only text area */
+            display: block;
+            height: 48px;
+            text-decoration: none;
+            color: #777;
+            font-size: 18px;
+            padding: 0 45px;
+        }
+        .nav li:hover{
+            background-color: #3f3f3f;
+            color:#e8e7e3 ;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li><a href='#'>Nav-Item 1</a></li>
+        <li><a href='#'>Nav-Item 2</a></li>
+        <li><a href='#'>Nav-Item 3</a></li>
+        <li><a href='#'>Nav-Item 4</a></li>
+        <li><a href='#'>Nav-Item 5</a></li>
+        <li><a href='#'>Nav-Item 6</a></li>
+        <li><a href='#'>Nav-Item 7</a></li>
+    </ul>
+</body>
+</html>

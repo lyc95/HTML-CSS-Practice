@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="1.Table.html" autocomplete="off">
+        <!-- 
+            set value for input tag to set the default for that tag
+            autocomplet 
+                可以关闭自动补全
+                    put at form level to apply to all
+            readonly, 数据会提交
+            disable， 数据不会提交
+            autofocus 设置自动获取焦点
+         -->
+        <input type="text" name="username" autocomplete="off" />
+        <br><br>
+        <input type="submit">
+        <!-- 
+            normal button will not trigger submit action
+            can make use of JS to trrigger submit ourself
+        -->
+        <input type="button" value="button">
+        <!-- reset button -->
+        <input type="reset">
+        <br><br>
+        <!-- 同样的功能 另一种写法 -->
+        <button type="submit">提交</button>
+        <button type="reset">重置</button>
+        <button type="button">按钮</button>
+        <br><br>
+        <input type="color">
+        <br><br>
+        <!-- 自动对Email进行格式检查when submitting -->
+        <input type="email" autofocus>
+    </form>
+</body>
+</html>

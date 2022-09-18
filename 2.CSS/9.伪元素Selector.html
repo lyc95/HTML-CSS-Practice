@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p {
+        font-size: 20px;
+    }
+    /* 伪元素 特殊的不真实存在的元素
+        ::first-letter
+            first character
+        ::first-line
+        ::selection 
+            selected content
+        ::before
+            start of element
+        ::after
+            end of element
+        usered with content attribute
+     */
+     p::first-letter{
+        font-size: 50px;
+     }
+     p::first-line{
+        background-color: orange;
+     }
+     p::selection{
+        background-color: yellowgreen;
+     }
+     /* can not be selected */
+     div::before{
+        content: 'abc ';
+        color: red;
+     }
+     div::after{
+        content:  " haha";
+        color: skyblue
+     }
+</style>
+<body>
+    <!-- the quote here for q tage is actually added through the ::before/after -->
+    <q>Hello!</q>
+    <div>Hello There!!</div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo doloribus necessitatibus voluptates facilis reiciendis ut est aspernatur quasi! Voluptate ea rem quibusdam soluta vero provident quod optio natus praesentium.
+    </p>
+    
+</body>
+</html>

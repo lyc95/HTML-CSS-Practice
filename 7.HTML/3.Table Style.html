@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 50%;
+            border: 1px solid black;
+            /* 指定边框之间的距离 */
+            border-spacing: 0;
+
+            /* 设置边框合并 */
+            border-collapse: collapse;
+            /* 块元素设置居中 */
+            margin: 0 auto;
+        }
+        td{
+            border: 1px solid black;
+            height: 100px;
+            /* 
+                默认是垂直居中的效果 
+                vertical align 可以修改
+            */
+            vertical-align: middle;
+            text-align:center;
+        }
+        table tr:nth-child(2n){
+            background-color: skyblue;
+        }
+        /* 
+            table > tr:nth-child(2n+1) 无效
+            如果表格里没有使用tbody 而是直接使用tr
+            则浏览器会自动创建一个tbody 并将tr全部放在其中
+            tr 不是 table的子元素， 无法通过子元素旋蒸
+            tbody > tr:nth-child(2n+1) 
+        */
+        tbody > tr:nth-child(2n+1){
+            background-color: greenyellow;
+        }
+
+        /* 
+            另外一种设置居中的方式
+            但是不推荐使用
+         */
+        .box1{
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            /* 将元素水平居中 */
+            display: table-cell;
+            /* 这个可以使用 */
+            vertical-align: middle;
+            /* 只对text有作用 */
+            text-align:center;
+
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    <table>
+        <tr>
+            <td>No.</td>
+            <td>Name</td>
+            <td>Gender</td>
+            <td>Address</td>
+            <td>Age</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>yc-1</td>
+            <td>Male</td>
+            <td>#05-101</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>yc-2</td>
+            <td>Male</td>
+            <td>#05-102</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>yc-3</td>
+            <td>Male</td>
+            <td>#05-103</td>
+            <td>20</td>
+        </tr>
+    </table>
+</body>
+</html>

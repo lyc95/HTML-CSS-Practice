@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Content and border 内容区与边框-->
+        <!-- <style>
+            .box1{
+                /*
+                    content(内容区): contains all child elements and texts
+                        determined by width and height
+                        这里的长度和宽度都只是是描述内容区的
+                */
+                width: 200px;
+                height: 200px;
+                background-color: #bfa;
+                /*
+                    border(边框)
+                    To set border, we will need at least 3 attributes(缺一不可)
+                        border-width
+                        border-color
+                        border-style
+                    The size of border will afect the size of the box
+                */
+                border-width: 10px;  默认值为3px， 如果不写的话
+                border-color: red;
+                border-style: solid;
+
+            }
+        </style> -->
+    <!-- property of border 边框属性-->
+        <!-- <style>
+            .box1 {
+                width: 200px;
+                height: 200px;
+                background-color: #bfa;
+                border-width: 10px;
+                /* border-width: 10px 20px 30px 40px;  */
+                /*
+                    border-width的参数
+                    四个值：
+                        指定边框的四个方向的宽度, 上 右 下 左
+                    三个值：
+                        上 左右 下
+                    两个值：
+                        上下 左右
+                    一个值：
+                        上下左右
+
+                    Alternative approach
+
+                    border-xxx-width
+                    xxx can be top right left bottom
+                */
+                color: pink;
+                /*  border-color
+                    同样可以指定四个边框的颜色， 规则与width一样 
+                    也可以省略不写， 如省略则会自动使用color的颜色
+                */
+                border-color: orange red green blue;
+                /*
+                    指定边框的样式, 规则同上
+                        solid
+                        dotted
+                        dashed
+                        double 
+                    border-style 的default value为null
+                 */
+                border-style: solid dotted dashed double;
+
+
+                
+                
+            }
+            .box2{
+                width: 200px;
+                height: 200px;
+                background-color: #bfa;
+                /* 
+                    border 简写 顺序不限
+                    border-xxx 也可以有简写方式
+                */
+                border: 10px orange solid;
+                border-top: 20px red solid;
+                /* 去掉不想要的样式 */
+                border-right:none ;
+            }
+        </style> -->
+
+        <!-- padding -->
+        <style>
+            .box1{
+                width: 200px;
+                height: 200px;
+                background-color: #bfa;
+                border: 10px orange solid;
+                /*
+                    内边距padding
+                        4个方向
+                        padding-top
+                        padding-right
+                        padding-bottom
+                        padding-left 
+                    内边距的设置会影响box的大小
+                    背景颜色会延伸至内边距上
+                    background color will extend to padding
+
+                    box的可见框的大小 由content border and padding共同决定
+                 */
+
+                 /* 
+                    padding-top:100px;
+                    padding-left:100px;
+                    padding-right:100px;
+                    padding-bottom:100px; 
+                 */
+
+                 /* 
+                    也可简写并且同时设置四个边框的宽度值
+                    padding: 10px 20px 30px 40px; 
+                 */
+                 padding: 100px;
+
+            }
+            .inner{
+                width: 100%;
+                height: 100%;
+                background-color: yellow;
+            }
+        </style>
+</head>
+<body>
+    <!-- 
+        Box Model
+            - CSS treat each element as retangular box
+            - what we need to do is just to place the box to the right location
+            - Box consist of following:
+                content(内容区)
+                padding(内边距)
+                border(边框)
+                margin(外边距)          
+
+     -->
+    <div class="box1">
+        <div class="inner"></div>
+    </div>
+    <div class="box2"></div>
+</body>
+</html>

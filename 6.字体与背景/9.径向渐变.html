@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            radial-gradient() 径向渐变（中心向四周的放射性的效果
+            默认情况下，径向渐变的形状根据元素的形状来计算的
+                - 正方形 --> 圆形
+                - 长方形 --> 椭圆形
+                - 默认情况下，circle和ellipse是自动适配盒子的，我们也可以手动指定径向渐变的形状
+
+            也可以指定渐变的位置
+            位置
+
+            ● top
+            ● right
+            ● left
+            ● center
+            ● bottom
+
+            当然，除了上述值，还可以指定像素大小
+
+            ● closest-side 近边
+            ● farthest-side 远边
+            ● closest-corner 近角
+            ● farthest-corner 远角
+
+            总结：径向渐变的渐变方向以圆心为起点，往四周扩散的；同一半径上的颜色是渐变的，同一圆周上的颜色是一致的
+
+            同时对其形状/大小和位置进行指定
+
+            radial-gradient(形状/大小 at 位置, 颜色 位置, 颜色 位置, 颜色 位置)
+            总结一下
+
+            形状
+
+            ● circle 圆形
+            ● ellipse椭圆
+
+            大小
+
+            ● closest-side 近边
+            ● farthest-side 远边
+            ● closest-corner 近角
+            ● farthest-corner 远角
+
+            位置
+
+            ● top
+            ● right
+            ● left
+            ● center
+            ● bottom
+
+            类似于线性渐变，径向渐变也有对应的repeat属性
+            
+        */
+        .box1{
+            width: 300px;
+            height: 500px;
+            /* background-image: radial-gradient(red, yellow); */
+            /* background-image: radial-gradient(circle, red, yellow); */
+            /* background-image: radial-gradient(ellipse, red, yellow); */
+            /* background-image: radial-gradient(100px 200px, red, yellow) */
+            
+            /* background-image: repeating-radial-gradient(100px 200px, red, yellow) */
+            /* background-image: radial-gradient(100px 100px at 100px 100px, red, yellow) */
+            /* background-image: radial-gradient(100px 100px at top left, red, yellow)  */
+            background-image: radial-gradient(100px 60px, red, yellow);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

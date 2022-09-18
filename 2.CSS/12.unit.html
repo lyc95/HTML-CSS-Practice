@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            length unit
+                pixel
+                    different screen will have different size of pixel
+                    200px will show differently in different device
+            percentage
+                设置属性值为相对于其父元素的百分比
+                percentage compared to its parent node
+                benefit: child node change with change of parent node
+         */
+        .box1{
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+        }
+
+        .box2{
+            width: 50%;
+            height: 50%;
+            background-color: orange;
+        }
+
+        /*
+            em - 相对元素的字体大小来计算
+            1em = 1 font size 
+            size of em change with change of font
+
+            rem - 相对root元素(html)的字体大小来计算
+        */
+        .box3{
+            font-size: 40px;
+            width: 10em;
+            height: 10em;
+            background-color: greenyellow;
+        }
+
+        html{
+            font-size: 50px;
+        }
+        .box4{
+            width: 10rem;
+            height: 10rem;
+            background-color: yellow;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+</body>
+</html>

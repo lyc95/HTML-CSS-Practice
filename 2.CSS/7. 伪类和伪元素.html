@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=ul, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            伪类 用来描述一个元素的特殊状态
+                like first element
+
+            :first-child
+                first child node
+            :last-child
+                last child node
+            :nth-child(n)
+                select nth child
+                special value
+                    n 0 to infinity select all
+                    2n/even even
+                    2n+1/odd odd
+                是根据所有的子元素进行排顺序
+
+            :first-of-type
+            :last-of-type
+            :nth-of-type
+                同类型进行排序
+
+            :not()
+                去除符合条件的元素
+         */
+        /* ul > li:first-child {
+            color: orange;
+        }
+
+        ul > li:last-child {
+            color: blue;
+        } */
+
+        /* ul > li:first-of-type{
+            color: pink;
+        } */
+        ul > li:not(:nth-of-type(3)) {
+            /* 效果一处第三个li元素 */
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        ul>li*num 
+        vscode 快捷键
+    -->
+    <ul>
+        <span>hello span</span>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>

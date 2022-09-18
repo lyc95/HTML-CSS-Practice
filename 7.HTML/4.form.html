@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        form表单 用于提交数据
+
+        一个必须的属性
+            action 指定要提交的server address
+     -->
+     <form action="3.Table Style.html">
+        <!-- 
+            表单项目
+            Note: 数据要提交到服务器中, 需要为元素指定一个name
+        -->
+
+
+        Input: <input type="text" name="username"/><br><br>
+        
+        Password: <input type="password" name="password"><br><br>
+        
+        <!-- 
+            single select 
+            name field has to be the same
+            value 选择框还需要具备一个value属性, value的值被会传给目标服务器
+            checked set default selected 设置默认选中
+        -->
+        Single Selection:
+        A: <input type="radio" name="singleSelect" value="A">
+        B: <input type="radio" name="singleSelect" value="B" checked><br><br>
+
+
+        <!-- 
+            多选 multi selection
+                提交结果=======>test=1&test=2&test=3
+         -->
+         多选框
+         <input type="checkbox" name="test" value="1">
+         <input type="checkbox" name="test" value="2">
+         <input type="checkbox" name="test" value="3" checked><br><br>
+
+         <!-- 
+            下拉列表
+            设置name属性在select tag 上
+            设置value选择发送给服务器的数据
+            selected 设置默认选中
+          -->
+          <select name="haha" id="">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3" selected>Option 3</option>
+          </select><br><br>
+
+
+        <input type="submit" value="Click to Submit">
+     </form>
+</body>
+</html>

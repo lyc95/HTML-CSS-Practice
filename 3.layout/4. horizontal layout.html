@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水平布局</title>
+    <style>
+        .outer{
+            width: 800px;
+            height: 200px;
+            border: 10px red solid;
+        }
+        .inner{
+            width: 200px;
+            /* width: auto; width 的值默认为auto */
+            height: 200px;
+            margin-left: auto;
+            /* margin-left: 200px; */
+            margin-right: auto;
+            background-color: #bfa;
+            /* margin-left: 100px; */
+            /*
+                horizontal element
+                1. 子元素会在其父元素的content area 存在
+                2. 元素在其水平方向的位置由下列值共同决定
+                    margin-left
+                    border-left
+                    padding-left
+                    width
+                    padding-right
+                    border-right
+                    margin-right
+
+                3. 子元素的水平布局必须满足下列等式：
+                    margin-left + border-left + 
+                    padding-left + width + 
+                    padding-right + border-right + 
+                    margin-right = 其父元素content area的宽度
+                    以上等式必须满足， 如果不成立则为过度约束，会自动调整
+                        调整情况
+                            1. 这七个值没有auto的情况， 浏览器会自动调整margin-right使等式满足
+                            2. 这七个值有三个可以设置成auto
+                                width
+                                margin-left
+                                margin-right
+                                如果某个值为auto 则会自动调整auto的那个值使得等式成立
+                                 0 + 0 + 0 + auto + 0 + 0 + 0 = 800
+                                如果 width = auto, 一个外边距为auto， 则width will set to maximum， 设置为auto的一个外边距 = 0
+                                如果 width = auto, 两个外边距为auto，则width will set to maximum， 设置为auto的两个外边距 = 0
+                                如果 width = 固定值, 两个外边距为auto，则设置为auto的两个外边距为相同的值（子元素在其父元素中水平居中效果）
+             */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

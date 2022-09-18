@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 60px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+
+            /* margin-left: 200px;
+            margin-top: -200px; */
+
+            /*
+                虽然我们可以使用margin实现效果但是这种做法很不灵活
+                Position
+                    -use position attribute
+                        values：
+                        static： default 元素是静止的没有开启定位
+
+                        relative：  开启相对定位
+                            元素开启相对定位后 如果不设置偏移量， 它不会发生任何变化
+                            相对定位的参照点是元素在文档流里的位置（参照点就是它自己
+                            相对定位会提升元素的层级
+                            不会脱离文档流
+                            不会改变元素的形式（block or inline）
+                        absolute：  开启绝对定位
+
+                        fixed：  开启固定定位
+
+                        sticky：  开启粘滞定位
+                offset 偏移量
+                    adjust the location of element by set value of offset
+                    当元素开启定位后， 才可以设置偏移量
+                    top
+                        定位元素与定位位置上边的距离
+                    bottom
+                        定位元素与定位位置下边的距离
+                    -垂直方向的位置由top和bottom共同决定, 通常只会使用一个
+                    -top 越大 越靠下
+
+                    left
+                        左侧距离
+                    right
+                        右侧距离
+                    -水平方向的位置由left和right共同决定, 通常只会使用一个
+                    -left越大 越靠右
+             */
+
+             position: relative;
+             left: 200px;
+             bottom: 200px;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            /* margin-top: 200px; */
+            position: relative;
+            bottom: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>

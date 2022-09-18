@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            font-size: 50px;
+            /*
+                 text-decoration文本修饰
+                 none
+                 underline
+                 line-through 删除线
+                 overline 上划线
+             */
+            text-decoration: line-through red dotted;
+        }
+        .box2{
+            width: 200px;
+            /* white-space 设置网页如何处理空白 
+                normal 正常
+                nowrap 不换行
+                pre 保留空格(可以保留多个空格， 多个空格不再解析成一个空格)
+            */
+            white-space: nowrap;
+            overflow: hidden;
+            /* 溢出的内容设置省略号 */
+            text-overflow: ellipsis;
+
+            /* 以上四个属性内容缺一不可 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, id omnis. Dicta tempora quis magni facere porro, repellendus eum deleniti, quas fugit tempore consequuntur iusto mollitia ratione nulla veniam quos.
+    </div>
+    <div class="box1">
+        Hello ! 今天天气真不错！
+    </div>
+</body>
+</html>

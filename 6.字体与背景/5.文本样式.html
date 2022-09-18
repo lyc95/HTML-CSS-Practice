@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            border: 1px red solid;
+            /* 
+                text-align 文本水平对齐
+                    left: default
+                    right:右对齐
+                    center： 居中对齐
+                    justify： 两端对齐
+             */
+             text-align: justify;
+             font-size: 50px;
+        }
+        span{
+            font-size: 20px;
+            border: 1px blue solid;
+            /* 
+                vertical-align： 设置元素的垂直对齐的方式
+                    baseline： 默认值，基线对齐(看不见)
+                    top: 顶部对齐
+                    bottom： 底部对齐
+                    middle: 居中对齐
+                        子元素的中线和x对齐
+             */
+             vertical-align: middle;
+        }
+        p{
+            border: 1px red solid;
+        }
+        img{
+            /*
+                由于默认是极限对齐， 下面会有一个gap
+                可是设置vertical-align来调整 
+             */
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        Today is x<span>good </span>  !
+    </div> -->
+    <!-- <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi blanditiis necessitatibus illo porro eveniet ipsa enim? Molestiae officia quae cupiditate blanditiis in, sapiente praesentium itaque, facilis qui deleniti debitis earum.
+    </div> -->
+    <p>
+        <img src="../1.Introduction/image/apple fruit_27791296b9.jpg" alt="">
+    </p>
+</body>
+</html>

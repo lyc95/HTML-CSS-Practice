@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+
+            /* 
+                outline设置轮廓线 用法与border相似
+                    不同的点：轮廓不会影响到可见框的大小, 不会影响到页面布局
+                box-shadow 设置shadow 效果, 不会影响到页面布局
+                    在元素的正下方
+                    box-shadow:200px 200px orange;
+                    第一个值： 水平侧 offset 设置阴影的水平位置 positive右移动 negative 左移动
+                    第二个值： 垂直侧 offset 设置阴影的垂直位置 positive下移动 negative 上移动
+                    第三个值： shadow 模糊效果 阴影模糊半径
+                    第四个值： color of shadow
+             */
+
+             box-shadow:50px 50px 20px rgba(0, 0, 0, .3);
+        }
+        .box1:hover{
+            /* outline: 10px red solid; */
+            border: 10px red solid;
+        }
+        .box2{
+            margin-top: 200px;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* 设置圆角 半径*/
+            /* border-radius: 50px; */
+            /* border-bottom-right-radius:100px 10px; */
+            /*
+                border-radius
+                    4 values: 左上 -> 顺时针
+                    3 values：左上 右上/左下 右下
+                    2 values： 左上/右下 右上/左下
+                    1 value： all
+                border-top-left-radius
+                border-top-right-radius
+                border-bottom-left-radius
+                border-bottom-right-radius
+             */
+             /* 50% set to circle circle */
+             border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <span>Hello</span>
+    <div class="box2"></div>
+</body>
+</html>

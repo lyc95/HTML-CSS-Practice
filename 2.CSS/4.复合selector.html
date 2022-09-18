@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+        /* 
+            交集选择器
+            选择同时符合多个条件的元素
+            syntax： selector1selector2selector3...
+            Note:it have to start with selment selector if there is
+            如有元素选择器，必须以元素选择器开头语
+        */
+        /* 满足元素+class */
+        div.red {
+            font-size: 30px;
+        }
+        /* 同时满足多个class */
+        .a.b.c{
+            color: blue;
+        }
+        /* 满足元素+id */
+        div#box1{
+            background-color: aqua;
+        }
+        /* 
+            选择器分组（并集选择器，同时选择多个选择器对应的元素） 
+            #b1, p1, h1, span,div.red {}also valid
+        */
+        h1, span {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">I am Div</div>
+    <p class="red">I am <P></P></p>
+    <div class="a b c">Hello!Earth!!</div>
+    <h1>h11111</h1>
+    <span>spannnnn</span>
+</body>
+</html>

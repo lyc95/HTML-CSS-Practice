@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 500px;
+            height: 200px;
+            background-color: #bfa;
+            /* 
+                控制元素向左或向右浮动
+                use float attribute to move element within the content area of its parent element
+                    none default
+                    left
+                    right
+                元素设置float以后， 水平布局的等式不需要强制成立了
+                元素设置float以后, 会完全从normal flow文档流中脱离
+                    下面的在文档流中的元素会自动向上移动
+                浮动元素的特点：
+                    1. 元素脱离文档流，不在占据文档流的位置
+                    2. 设置浮动以后， 元素会向parent element的左侧或右侧移动
+                    3. 浮动元素不会从父元素中溢出
+                    4. 浮动元素不会超过前面的其他的元素（no overlap with other float element
+                    5. 如果float element的上面是一个没有浮动的块元素， 则浮动元素无法上移
+                    6. 浮动元素不会超过上一层的浮动元素兄弟， 最多一样高
+
+                    float的主要作用是让页面元素水平排列 for arrangement of horizontal layout
+             */
+             float: left;
+        }
+        .box2{
+            width: 500px;
+            height:200px;
+            background-color: orange;
+            float: left;
+        }
+        .box3{
+            width: 200px;
+            height:200px;
+            background-color: yellow;
+            float: right;
+        }
+        /* .box4{
+            width: 200px;
+            height:200px;
+            background-color: pink;
+            float: left;
+        } */
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3">
+        <!-- <div class="box4"></div> -->
+    </div>
+</body>
+</html>

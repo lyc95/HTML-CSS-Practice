@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Of Box</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            padding: 10px;
+            border: 10px red solid;
+            /* 
+                box的可见框的大小由content, border and padding 决定
+                -box-sizing
+                    content-box default, width and height refer to content
+                    border-box width and height refer to 盒子可见框size(content + border + padding 的总大小)
+                        写多大可见框就是多大
+             */
+             box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

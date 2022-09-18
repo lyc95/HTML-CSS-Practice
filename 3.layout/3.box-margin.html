@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            border: 10px orange solid;
+            /*
+                - margin
+                - 不影响可见框， 会影响location of box
+                - 4 directions
+                    margin-top
+                        positive, element will move down
+                    margin-bottom
+                        positive , 其下面的元素会向下移动
+                    margin-left
+                        positive, element will move right
+                    margin-right
+                        默认情况下设置， 不会产生任何效果
+
+                    如果设置为negative 则会向相反的方向移动
+                - 元素在页面中是按照自左向右的顺序排列的
+                    默认情况下margin-left and margin-top 会移动元素自身
+                    而设置margin-right and margin-bottom 会移动其他元素
+                - margin 简写属性
+                    margin 同时设置四个方向的外边距
+                - margin会影响box 实际占用的空间的大小
+             */
+             margin-top: 100px;
+             margin-bottom: 100px;
+        }
+        .box2{
+                width: 200px;
+                height: 200px;
+                background-color: #bfa;
+                border: 10px solid aqua;
+             }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

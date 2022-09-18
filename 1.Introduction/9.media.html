@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+<body>
+    <!-- 
+        import external audio file 
+        user is not allowed to control those file by default
+        to allow user to control the file, add attribute controls
+        属性
+            controls 是否允许用户控制播放
+            autoplay 设置用户文件自动播放
+                如果设置了autoplay, 打开页面时候会自动播放
+            loop 设置音乐循环播放
+        以上的属性都是没有值的，通过设置即判断有没有来设定
+
+        IE8 不支持
+    -->
+    <!-- <audio src="source/ukulele.mp3" controls autoplay loop></audio> -->
+
+    <!-- 还可以通过source指定 -->
+    <audio controls>
+        <source src="source/ukulele.mp3">
+        <!-- 解决IE8兼容性问题 -->
+        <embed src="./source/ukulele.mp3" type="audio/mp3" width="200" height="200"> -->
+    </audio>
+
+    <br>
+    <!-- 支持IE8 lol -->
+    <!-- <embed src="./source/ukulele.mp3" type="audio/mp3" width="200" height="200"> -->
+
+    <!-- 
+        import Video file similar to audio
+    -->
+    <video controls>
+        <source src="source/video1.mp4">
+         <!-- 解决IE8兼容性问题 -->
+        <embed src="source/video1.mp4" type="video/mp4">
+    </video>
+
+</body>
+</html>

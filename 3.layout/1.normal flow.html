@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            background-color: yellow;
+        }
+        .box2{
+            width: 100px;
+            background-color: red;
+        }
+        span{
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Normal Flow 文档流
+            - website is a layered structure
+            - css can set style for each layers
+            - the bottom layer is normal flow
+                all element that we created is in the normal flow
+            - Element have 2 state
+                attach normal flow(在文档流)
+                detach normal flow（脱离文档流
+            当在文档流
+                Block Element
+                    occupy a line in page（独占一行）
+                    default width is as same as its parent element（把父元素撑满）
+                    default height 被内容（子元素）撑开
+                    在页面内从上向下水平排列
+
+                In-Line Element
+                    不会独占一行，仅占据自身大小
+                    在页面内从左向右水平排列
+                    如果一行容纳不下，会换至第二行
+                    其高度和宽度都被其内容撑开
+     -->
+     <div class="box1">div1</div>
+     <div class="box2">div2</div>
+     <span>我是span1</span>
+     <span>我是span2</span>
+     <span>我是span3</span>
+     <span>我是span4</span>
+     <span>我是span5</span>
+     <span>我是span6</span>
+     <span>我是span7</span>
+     <span>我是span8</span>
+
+</body>
+</html>

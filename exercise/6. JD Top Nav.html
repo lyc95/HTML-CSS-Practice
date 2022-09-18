@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD Top Nav</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="../fa/css/all.css">
+    <style>
+
+    /* 设置浮动后解决高度塌陷问题 */
+    .clearfix::before,
+    .clearfix::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    body{
+        font-size: 12px;
+    }
+
+    /* 设置整体的外部容器 */
+    .top-bar-wrapper{
+        /* 设置宽度与背景颜色 */
+        width: 100%;
+        background-color: #e3e4e5;
+        height: 30px;
+        border-bottom: 1px solid #ddd;
+        line-height: 30px;
+    }
+
+    /* 设置内部容器宽度 */
+    .top-bar{
+        /* 定宽 */
+        width: 1190px;
+        /* 水平居中 */
+        margin: 0 auto;
+        /* background-color: #bfa; */
+        position: relative;
+    }
+
+    .top-bar a:hover,
+    .top-bar a.highlight
+    {
+        color: red;
+    }
+
+    .location{
+        /* 设置浮动， 元素脱离文档流 */
+        float: left;
+    }
+
+    .location .fa-location-dot {
+        color: red;
+    }
+
+    .location .city-list{
+        width: 320px;
+        height: 436px;
+        background-color: white;
+        border: 1px solid rgb(204, 204, 204);
+        display: none;
+        /* 设置绝对定位 不占据页面位置 */
+        position: absolute;
+        box-shadow: 0 0 2px rgba(0, 0, 50, 0.3);
+        top: 31px;
+    }
+    
+    /* 当鼠标移入location时候， 让city-list显示 */
+    .location:hover .city-list{
+        display: block;
+    }
+    
+    .current-city{
+        padding: 0 10px;
+        position: relative;
+        border: 1px solid transparent;
+        border-bottom: none;
+        z-index: 1;
+    }
+
+    .location:hover .current-city{
+        background-color: white;
+        border: 1px solid rgb(204, 204, 204);
+        border-bottom: none;
+        padding-bottom: 1px;
+    }
+
+    .shortcut{
+        /* 设置浮动， 元素脱离文档流 */
+        float: right;
+    }
+
+
+
+    .shortcut li {
+        /* 基于包含块设置左浮动 */
+        float: left;
+    }
+
+    .shortcut .line{
+        /* vertical line */
+        width: 1px;
+        /* set height with top and bottom margin which are all 10 px */
+        height: 10px;
+        background-color: #999;
+        margin: 10px 12px;
+    }
+
+    .top-bar a,
+    .top-bar span,
+    .top-bar i{
+        color: #999;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="top-bar-wrapper">
+        <div class="top-bar clearfix">
+            <!-- Left Part -->
+            <div class="location">
+                <div class="current-city">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="javascript:;">北京</a>
+                </div>
+                <!-- 放置城市列表下拉框 -->
+                <div class="city-list">
+
+                </div>
+            </div>
+            <!-- Right Part -->
+            <ul class="shortcut">
+                <li>
+                    <a href="javascript:;">Login</a>
+                    <a href="javascript:;" class="highlight">免费注册</a>
+                </li>
+                <!-- 分割线 -->
+                <li class="line"></li>
+                <li><a href="javascript:;">我的订单</a></li>
+                <li class="line"></li>
+                <li><a href="javascript:;">我的京东</a><i class="fa-solid fa-arrow-down"></i></li>
+                <li class="line"></li>
+                <li><a href="javascript:;">京东会员</a> </li>
+                <li class="line"></li>
+                <li><a href="javascript:;" class="highlight">企业采购</a><i class="fa-solid fa-arrow-down"></i></li>
+                <li class="line"></li>
+                <li><span>客户服务</span><i class="fa-solid fa-arrow-down"></i></li>
+                <li class="line"></li>
+                <li><span>网站导航</span></li>
+                <li class="line"></li>
+                <li><span>手机京东</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

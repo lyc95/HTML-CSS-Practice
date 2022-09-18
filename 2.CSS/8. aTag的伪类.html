@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* :link表示没访问过的链接(正常连接) */
+        a:link{
+            color: red;
+            /* 设置所有链接的size */
+            font-size: 50px;
+        }
+        /* 
+            :link表示访问过的链接(正常连接)
+            due to privacy reason, visited can only change color
+        */
+        a:visited{
+            color: orange;
+        }
+
+        /* :hover cursor move-in */
+        a:hover{
+            color: aqua;
+            font-size: 80px;
+        }
+        /* :active  click effect
+            它代表的是用户按下按键和松开按键之间的时间。
+        */
+        a:active{
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.google.com">Google visted</a>
+    <br>
+    <a href="https://www.google123.com">Google unvisted</a>
+</body>
+</html>

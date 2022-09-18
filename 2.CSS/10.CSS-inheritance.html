@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            style inheritance
+            the style apply to parent node will also appy to its childs
+            祖先和后代元素之间
+            继承是为了方便发开
+            注意，不是所有的样式都会被继承
+                比如背景相关（background）和布局相关
+                    子元素默认背景是transparent
+        */
+        p {
+            color: red;
+            background-color: orange;
+        }
+        body{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        i am a p element
+        <span>i am span in p element</span>
+    </p>
+    <span>i am span outside p element</span>
+
+</body>
+</html>
