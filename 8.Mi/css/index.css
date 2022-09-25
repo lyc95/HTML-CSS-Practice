@@ -1,0 +1,148 @@
+.top-bar-wrapper{
+    width: 100%;
+    background-color: #333;
+    height: 40px;
+    line-height: 40px;
+}
+
+.top-bar a{
+    font-size: 12px;
+    color: #b0b0b0;
+    display: block;
+}
+.top-bar a:hover{
+    color: #fff;
+}
+.top-bar .line{
+    font-size: 12px;
+    color: #424242;
+    margin: 0 8px;
+}
+
+.service, .top-bar li{
+    float: left;
+}
+
+.app{
+    position: relative;
+}
+
+.app-wrapper:hover > .app::after{
+    /*
+        show angle when hover 
+     */
+    border: 8px solid transparent;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: none solid #000;
+    border-bottom-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    margin: auto;
+}
+
+/* .app-wrapper:hover > .app .qrcode{
+    display: block;
+} */
+
+.app:hover .qrcode,
+.app:hover::after{
+    display:block;
+    height:148px;
+} 
+
+
+.app .qrcode{
+    /* display: none; */
+    width: 124px;
+    height: 148px;
+    background-color: #fff;
+    line-height: 1;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* taken our of the workflow */
+    position: absolute;
+    left: -40px;
+    /* 搭配一直使用 = display none */
+    height: 0;
+    overflow: hidden;
+    /* transition 设置样式过度效果*/
+    transition: height 0.3s;
+}
+.app .qrcode img {
+    width: 90px;
+    margin: 17px;
+    margin-bottom: 10px;
+}
+.app .qrcode span {
+    color: #000;
+    font-size: 14px;
+}
+
+.shop-cart, .user-info{
+    float: right;
+}
+.shop-cart a {
+    width: 120px;
+    background-color: #424242;
+    text-align: center;
+}
+.shop-cart {
+    margin-left: 26px;
+}
+
+.shop-cart:hover a {
+    background-color: #fff;
+    color: #ff6700;
+
+}
+.shop-cart i {
+    margin-right: 2px;
+}
+
+.header{
+    height: 100px;
+    /* background-color: #bfa; */
+}
+.header .logo{
+    float: left;
+    margin-top: 22px;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+    /* 隐藏logo中文字 */
+    text-indent: -9999px;
+}
+.header .logo a {
+    width: 55px;
+    height: 55px;
+    background-color: white;
+    /* display: block; */
+    background-image: url(../img/logo.jpeg);
+    background-position: center;
+    position: absolute;
+    /* 过渡的效果必须指定起始值 */
+    transition: left 0.3s;
+}
+
+.header .logo .home{
+    left: -55px;
+    background-image: url("../img/logo.jpeg");
+
+}
+.header .logo .mi{
+    left: 0;
+}
+
+
+/* 设置鼠标移入后的logo转换的效果*/
+.header .logo:hover .mi{
+    left: 55px;
+}
+.header .logo:hover .home{
+    left: 0px;
+}
